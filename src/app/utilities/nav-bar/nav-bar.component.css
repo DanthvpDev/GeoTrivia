@@ -1,0 +1,13 @@
+.navbar {
+    background: rgba(5, 1, 11, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.2px);
+    -webkit-backdrop-filter: blur(3.2px);
+    z-index: 1;
+}
+
+#navbarNav .nav-link:hover,
+.navbar-brand:hover {
+    color: #9870e3 !important;
+}
