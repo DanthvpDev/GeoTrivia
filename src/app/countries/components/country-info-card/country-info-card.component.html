@@ -1,0 +1,12 @@
+<article class="card">
+    <img [src]="countries.flag" class="card-img-top" [alt]="countries.name">
+    <section class="card-body">
+        <h5 class="card-title text-light">{{countries.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-light">{{countries.acronym}}</h6>
+    </section>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item text-light"><strong>Population:</strong> {{countries.population | number}}</li>
+        <li class="list-group-item text-light"><strong>Region:</strong> {{countries.region}}</li>
+        <li class="list-group-item text-light"><strong>Capital:</strong> {{countries.capital}}</li>
+    </ul>
+</article>

@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UtilitiesModule } from './utilities/utilities.module';
 import { CountriesModule } from './countries/countries.module';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { GameModule } from './game/game.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,12 @@ import { CountriesModule } from './countries/countries.module';
     BrowserModule,
     AppRoutingModule,
     UtilitiesModule,
-    CountriesModule
+    CountriesModule,
+    GameModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi())
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

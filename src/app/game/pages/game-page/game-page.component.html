@@ -1,0 +1,9 @@
+<section class="d-flex flex-column justify-content-center align-content-center">
+    <h2 class="text-center z-2">GeoTrivia Game</h2>
+    <article class="text-center">
+        <p class="z-3">Challenge your knowledge with the GeoTrivia Game!</p>
+        <div *ngFor="let country of countries">
+            <game-flag [country]="country"></game-flag>
+        </div>
+    </article>
+</section>

@@ -1,3 +1,18 @@
 <section class="d-flex justify-content-center section-bg">
-    <util-search-bar></util-search-bar>
+    <util-search-bar (sendedInput)="SearchCountry($event)"></util-search-bar>
+</section>
+<section class="mt-5">
+    <h2 class="text-center">Information</h2>
+    <div class="container d-flex flex-wrap gap-4 justify-content-center mt-5">
+        @if (countries.length === 0) {
+            <div class="bg-danger container">
+                <h3 class="text-center text-light"></h3>
+            </div>
+        }
+        @else {
+            @for (item of countries; track $index) {
+                <countries-country-info-card [countries]="item"></countries-country-info-card>
+            }
+        }
+    </div>
 </section>

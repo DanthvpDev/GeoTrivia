@@ -1,4 +1,4 @@
 <div class="d-flex flex-column gap-3">
     <h2 class="z-2">Countries around the world</h2>
-    <input type="text" class="form-control z-2 text-light" aria-label="Countries" ria-describedby="basic-addon1" #txtCountry>
+    <input type="text" class="form-control z-2 text-light" (keyup.enter)="SendingInput(txtCountry.value)" aria-label="Countries" aria-describedby="basic-addon1" #txtCountry>
 </div>
