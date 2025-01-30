@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { Country } from '../../../countries/interface/country-info.interface';
 
 @Component({
@@ -11,4 +11,13 @@ import { Country } from '../../../countries/interface/country-info.interface';
 export class FlagComponent {
   @Input()
   public country!:Country;
+
+  @Output()
+  public sendedFlag = new EventEmitter<string>
+
+  public SendingFlagSelected(event: Event):void {
+    const clickedElement = event.target as HTMLImageElement;
+    this.sendedFlag.emit(clickedElement.alt);
+  }
+
 }

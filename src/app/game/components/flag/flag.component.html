@@ -1,3 +1,1 @@
-<div>
-    <img [src]="country.flag" [alt]="country.name">
-</div>
+<img [src]="country.flag" [alt]="country.name" class="w-100 h-100" (click)="SendingFlagSelected($event)">
