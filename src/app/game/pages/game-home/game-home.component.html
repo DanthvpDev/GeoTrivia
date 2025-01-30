@@ -4,6 +4,10 @@
         <p class="text-center">Challenge your knowledge with the GeoTrivia Game!</p>
     </article>
     <div class="d-flex justify-content-center py-3">
-        <util-search-bar (sendedInput)="AssigningUserName($event)"></util-search-bar>
+        <util-search-bar (sendedInput)="SetUserName($event)"></util-search-bar>
     </div>
+    <nav class="d-flex justify-content-evenly mt-4 fw-bold">
+        <a [routerLink]="['/guessFlags']" (click)="SetGameMode('flags')"  class="nav-link link-light p-5 button rounded-5">Guess Countries</a>
+        <a [routerLink]="['/guessFlags']" (click)="SetGameMode('capital')" class="nav-link link-light p-5 button rounded-5">Guess Capitals</a>
+    </nav>
 </section>

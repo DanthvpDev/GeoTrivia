@@ -1,27 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GamePageComponent } from './pages/game-page/game-page.component';
+import { GuessFlagsPageComponent } from './pages/guess-flags-page/guess-flags.component';
 import { ButtonComponent } from './components/button/button.component';
 import { FlagComponent } from './components/flag/flag.component';
 import { GameHomeComponent } from './pages/game-home/game-home.component';
 import { UtilitiesModule } from '../utilities/utilities.module';
+import { RouterModule } from '@angular/router';
+import { ModalComponent } from './components/modal/modal.component';
+
 
 
 
 
 @NgModule({
   declarations: [
-    GamePageComponent,
+    GuessFlagsPageComponent,
     ButtonComponent,
     FlagComponent,
-    GameHomeComponent
+    GameHomeComponent,
+    ModalComponent,
   ],
   imports: [
     CommonModule,
-    UtilitiesModule
+    UtilitiesModule,
+    RouterModule
   ],
   exports: [
-    GamePageComponent,
+    GuessFlagsPageComponent,
     GameHomeComponent
   ]
 })

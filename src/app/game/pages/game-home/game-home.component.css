@@ -20,3 +20,16 @@ section::before {
     left: 0;
 }
 
+.button {
+    position: relative;
+    background-color: #7f1ebb;
+}
+
+.button:hover {
+    color: #8b38de;
+    background: rgba(143, 143, 143, 0.596);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(84, 6, 105, 0.47);
+    backdrop-filter: blur(3.2px);
+    -webkit-backdrop-filter: blur(3.2px);
+}

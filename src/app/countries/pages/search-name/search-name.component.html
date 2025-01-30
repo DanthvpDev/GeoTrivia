@@ -1,5 +1,8 @@
-<section class="d-flex justify-content-center section-bg">
-    <util-search-bar (sendedInput)="SearchCountry($event)"></util-search-bar>
+<section class="d-flex justify-content-center section-bg flex-column">
+    <h2 class="text-center">Find countries info around the world</h2>
+    <div class="w-25 mx-auto">
+        <util-search-bar (sendedInput)="SearchCountry($event)"></util-search-bar>
+    </div>
 </section>
 <section class="mt-5">
     <h2 class="text-center">Information</h2>
