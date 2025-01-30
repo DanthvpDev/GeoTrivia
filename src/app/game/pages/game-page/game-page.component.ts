@@ -3,7 +3,7 @@ import { Country } from '../../../countries/interface/country-info.interface';
 import { CountryService } from '../../../countries/services/country.service';
 
 @Component({
-  selector: 'app-game-page',
+  selector: 'flag-game-page',
   standalone: false,
   
   templateUrl: './game-page.component.html',
@@ -18,6 +18,8 @@ export class GamePageComponent implements OnInit{
   public correctOption: Country = {} as Country;
 
   public counter:number = 0;
+
+  public highestScore:number = 0;
 
   public flagSelected!:string;
 
@@ -50,7 +52,10 @@ export class GamePageComponent implements OnInit{
      this.flagSelected = altSelected;
      
      if(this.IsCorrectAnswer(this.flagSelected)) this.counter++;
-     else this.counter = 0;
+     else {
+       if(this.highestScore < this.counter) this.highestScore = this.counter ;
+       this.counter = 0;
+     }
 
      this.options = [];
      this.GetFourOptionsRandomly();

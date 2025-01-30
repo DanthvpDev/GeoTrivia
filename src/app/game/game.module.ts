@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { GamePageComponent } from './pages/game-page/game-page.component';
 import { ButtonComponent } from './components/button/button.component';
 import { FlagComponent } from './components/flag/flag.component';
+import { GameHomeComponent } from './pages/game-home/game-home.component';
+import { UtilitiesModule } from '../utilities/utilities.module';
+
 
 
 
@@ -10,13 +13,16 @@ import { FlagComponent } from './components/flag/flag.component';
   declarations: [
     GamePageComponent,
     ButtonComponent,
-    FlagComponent
+    FlagComponent,
+    GameHomeComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    UtilitiesModule
   ],
   exports: [
-    GamePageComponent
+    GamePageComponent,
+    GameHomeComponent
   ]
 })
 export class GameModule { }
